@@ -1,6 +1,9 @@
 # gridlines
 from tkinter import *
 
+def getvals():
+    print (f"The useername is {uservalue.get()}")
+    print (f"The password is {passvalue.get()}")
 
 root = Tk()
 root.geometry("655x434")
@@ -23,5 +26,7 @@ passentry= Entry(root, textvariable= passvalue)
 
 userentry.grid(row=0,column=1)
 passentry.grid(row=1,column=1)
+
+Button(text="Submit", command=getvals).grid()
 
 root.mainloop()
